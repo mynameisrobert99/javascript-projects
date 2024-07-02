@@ -8,6 +8,18 @@ function checkFuel(level) {
   }
 }
 
+let nonSuspiciousFunction = function(a) {
+  if (checkFuel(a) === 'green') {
+     return a - 100001;
+  }
+  else if (checkFuel(a) === 'yellow') {
+     return a - 50001;
+  }
+  else {
+     return a;
+  }
+};
+
 function holdStatus(arr){
   if (arr.length < 7) {
     return `Spaces available: ${7-arr.length}.`;
